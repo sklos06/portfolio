@@ -1,10 +1,13 @@
 import React from "react"
 
-export default function Menu(){
+type MenuProps = {
+    change: () => void;
+};
+export default function Menu(props:MenuProps){
 
     return(
         <div className="menu">
-            <button className="menu-button">Social media</button>
+            <button className="menu-button" onClick={props.change}>Social media</button>
             <button className="menu-button">Contact</button>
         </div>
     )

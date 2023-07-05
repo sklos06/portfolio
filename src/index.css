@@ -71,3 +71,25 @@ main{
   width: 600px;
   border-radius: 40%;
 }
+.social-reference{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 25px;
+  font-family: Inknut Antiqua;
+  gap: 10px;
+  background: #252121;
+}
+.social-reference >img {
+  width: 50px;
+}
+.social{
+  width: 100%;
+  display: flex;
+  gap:20px;
+  margin-left: 100px;
+  margin-top: 60px;
+  flex-direction: row;
+}

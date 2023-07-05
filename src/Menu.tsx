@@ -1,14 +1,16 @@
 import React from "react"
 
 type MenuProps = {
-    change: () => void;
+    changeMedia: () => void;
+    changeMail: () => void
+    getMail: boolean
 };
-export default function Menu(props:MenuProps){
+export default function Menu(props: MenuProps) {
 
-    return(
+    return (
         <div className="menu">
-            <button className="menu-button" onClick={props.change}>Social media</button>
-            <button className="menu-button">Contact</button>
+            <button className="menu-button" onClick={props.changeMedia}>Social media</button>
+            <button className="menu-button" onClick={props.changeMail}>{props.getMail?"Profile": "Projects"}</button>
         </div>
     )
 }

@@ -1,19 +1,24 @@
 import React, {useState} from 'react';
 import Menu from "./Menu"
 import Content from "./Content"
-
+import Projects from "./Projects"
 function App() {
     const [socialMedia, setSocialMedia] = useState<boolean>(false)
+    const [projects, setProjects] = useState(false)
 
-    function handleChange():void{
-        setSocialMedia(prevMedia=>{
-            return !prevMedia
+    function handleChangeMedia():void{
+        setSocialMedia(prevState=>{
+            return !prevState
         })
-        console.log(socialMedia)
+    }
+    function handleChangeMail():void{
+        setProjects(prevState=>{
+            return !prevState
+        })
     }
   return (
     <div>
-        <Menu change={handleChange} />
+        <Menu changeMedia={handleChangeMedia}  changeMail={handleChangeMail} getMail={projects}/>
         {socialMedia &&
             <div className="social">
                 <a className="social-reference" href="https://github.com/sklos06"><img src="./github.png"/><span>Github</span></a>
@@ -21,7 +26,7 @@ function App() {
                 <a className="social-reference" href="https://www.instagram.com/sklos0620/"><img src="./instagram.png"/><span>Instagram</span></a>
                 <a className="social-reference" href="https://www.facebook.com/profile.php?id=100006437774924"><img src="./facebook.png"/><span>Instagram</span></a>
             </div>}
-        <Content/>
+        {projects? <Projects/>:<Content/>}
     </div>
   );
 }

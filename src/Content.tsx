@@ -17,7 +17,7 @@ export default function Content(){
                 </p>
             </div>
             <div className="content-rightSide">
-                <img className="photo" alt="my-photo" src={"./photo.jpg"}/>
+                <img className="photo" alt="portrait" src="./photo.jpg"/>
             </div>
         </main>
     )
